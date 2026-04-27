@@ -71,3 +71,31 @@
     display: flex;
     gap: 10px;
 }
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas:
+        "topL topL"
+        "bottomL bottomL"
+        "midL midR"
+        "midL bottomR"
+        "topR topR";
+        max-width: 100%;
+        gap: 0.625rem;
+    }
+
+    .topL {
+        min-height: 500px;
+    }
+
+    .midL {
+        min-height: 370px;
+    }
+
+    .bottomL,
+    .topR {
+        min-height: 190px;
+    }
+}
